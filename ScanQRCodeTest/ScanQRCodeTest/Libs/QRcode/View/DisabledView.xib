@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DisabledView">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="387"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相机权限受限,请在iPhone的\&quot;设置-&gt;隐私-&gt;相机\&quot;选项中,允许本应用访问您的相机.授权后请点击“重试”按钮" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mxg-dE-5Ko">
+                    <rect key="frame" x="30" y="128.5" width="200" height="70"/>
+                    <color key="backgroundColor" red="1" green="0.99588777818152774" blue="0.88103509885290965" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="01a-7w-eFD"/>
+                        <constraint firstAttribute="height" constant="70" id="9Le-Oh-H64"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="01a-7w-eFD"/>
+                        </mask>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MI-4q-OmI">
+                    <rect key="frame" x="107" y="216" width="46" height="30"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="lUS-rf-feY"/>
+                        <constraint firstAttribute="height" constant="30" id="rwt-92-1XA"/>
+                    </constraints>
+                    <state key="normal" title="重试">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="buttonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="8aK-PD-qcR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Mxg-dE-5Ko" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LvY-Jk-UcG"/>
+                <constraint firstItem="Mxg-dE-5Ko" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QpR-Mw-aHa"/>
+                <constraint firstItem="Mxg-dE-5Ko" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="RDr-IZ-eEE"/>
+                <constraint firstItem="1MI-4q-OmI" firstAttribute="centerX" secondItem="Mxg-dE-5Ko" secondAttribute="centerX" id="bPl-7o-TtS"/>
+                <constraint firstItem="Mxg-dE-5Ko" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-30" id="biI-ky-21v"/>
+                <constraint firstAttribute="trailing" secondItem="Mxg-dE-5Ko" secondAttribute="trailing" constant="30" id="buP-Z6-W6i"/>
+                <constraint firstItem="Mxg-dE-5Ko" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="g3z-q7-8nL"/>
+                <constraint firstItem="1MI-4q-OmI" firstAttribute="top" secondItem="Mxg-dE-5Ko" secondAttribute="bottom" constant="17.5" id="hnn-Lk-sAG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="LvY-Jk-UcG"/>
+                    <exclude reference="QpR-Mw-aHa"/>
+                    <exclude reference="g3z-q7-8nL"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="alert" destination="Mxg-dE-5Ko" id="Izj-zk-vtT"/>
+                <outlet property="button" destination="1MI-4q-OmI" id="8f7-Wp-TPN"/>
+            </connections>
+            <point key="canvasLocation" x="182" y="76.5"/>
+        </view>
+    </objects>
+</document>
